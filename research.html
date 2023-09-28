@@ -15,6 +15,32 @@
 <meta http-equiv="Content-Language" content="zh-cn">
 <meta http-equiv="Content-Type" content="text/html; charset=gb2312">
 <link rel="stylesheet" href="jemdoc.css" type="text/css" />
+
+<style>
+        .hidden-text {
+            display: none;
+        }
+        .custom-button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+</style>
+<script>
+        function toggleText() {
+            var textElement = document.getElementById("hiddenText");
+            if (textElement.style.display === "none") {
+                textElement.style.display = "block";
+            } else {
+                textElement.style.display = "none";
+            }
+        }
+</script>
+
+
 <title>Philip R. Zhang
 </title>
 <script type="text/javascript"
@@ -31,7 +57,7 @@
 <script type="text/javascript" src="http://latex.codecogs.com/latexit.js"></script>
 </head>
 <body>
-	<font face="Comic Sans MS">
+<font face="Comic Sans MS">
 
 <table summary="Table for page layout." id="tlayout">
 <tr valign="top">
@@ -64,6 +90,8 @@
 </div>
 
 <p><font size="3">My research seeks to address fundamental business operations issues under the emerging trends in technology, marketplaces, and society. I am particularly enthusiastic about developing data science methodologies (machine learning, causal inference, and data-driven optimization) to evaluate and optimize the operations strategies in the contexts of <b>online platforms and marketplaces</b>, <b>sharing economy</b>, and <b>social networks</b>, especially their <b>recommendation</b>, <b>advertising</b>, <b>pricing</b>, and <b>matching</b> policies. </font></p>
+
+
 
 <h2><font size="4">Research Interests</font></h2>
 
@@ -118,7 +146,15 @@
 
 <li><font size="3"> <a href="TwoSided_Competition.pdf" target="_blank">Competition and Coopetition for Two-sided Platforms</a>, <i><a href="http://onlinelibrary.wiley.com/journal/10.1111/(ISSN)1937-5956" target="_blank">Production and Operations Management</a></i>, 31(5), 2022, 1997-2014 (with <a href="https://maxccohen.github.io/" target="_blank">Maxime Cohen</a>) [<a href="TwoSided_Competition_Appendix.pdf" target="_blank">Online Appendix</a>].</font></li>
 <ul>
-<font size="3">--- Honorable Mention award in the <i>INFORMS Service Science 2017 Best Cluster Paper Award</i>.</font>
+<font size="3">--- Honorable Mention award in the <i>INFORMS Service Science 2017 Best Cluster Paper Award</i>.</font><p>
+<!---  
+<font size="3">--- <button onclick="toggleText()"><font face="Comic Sans MS">
+Show Abstract</font></button>
+    <div class="hidden-text" id="hiddenText">
+        This text is hidden.
+    </div>
+</font>
+--->
 </ul>
 <p style="line-height:180%"> <font size="3"></font></p>
 

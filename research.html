@@ -10,11 +10,35 @@
 <meta name="distribution" content="global"/> 
 <meta name="author" content="Renyu Zhang"/> 
 <meta name="robots" conent="all"/>
-
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="jemdoc, see http://jemdoc.jaboc.net/" />
 <meta http-equiv="Content-Language" content="zh-cn">
 <meta http-equiv="Content-Type" content="text/html; charset=gb2312">
 <link rel="stylesheet" href="jemdoc.css" type="text/css" />
+
+<style>
+        .hidden-text {
+            display: none;
+        }
+
+        .toggle-link {
+            text-decoration: none;
+            color: #022b6d;
+            cursor: pointer;
+        }
+</style>
+<script>
+        function toggleText(elementID) {
+            var textElement = document.getElementById(elementID);
+            if (textElement.style.display === "none") {
+                textElement.style.display = "block";
+            } else {
+                textElement.style.display = "none";
+            }
+        }
+</script>
+
+
 <title>Philip R. Zhang
 </title>
 <script type="text/javascript"
@@ -31,7 +55,8 @@
 <script type="text/javascript" src="http://latex.codecogs.com/latexit.js"></script>
 </head>
 <body>
-	<font face="Comic Sans MS">
+<font face="Comic Sans MS">
+
 
 <table summary="Table for page layout." id="tlayout">
 <tr valign="top">
@@ -65,6 +90,8 @@
 
 <p><font size="3">My research seeks to address fundamental business operations issues under the emerging trends in technology, marketplaces, and society. I am particularly enthusiastic about developing data science methodologies (machine learning, causal inference, and data-driven optimization) to evaluate and optimize the operations strategies in the contexts of <b>online platforms and marketplaces</b>, <b>sharing economy</b>, and <b>social networks</b>, especially their <b>recommendation</b>, <b>advertising</b>, <b>pricing</b>, and <b>matching</b> policies. </font></p>
 
+
+
 <h2><font size="4">Research Interests</font></h2>
 
 <h3><font size="3">Methodologies</font></h3>
@@ -84,11 +111,47 @@
 <ol type=1 start=1>
 <li> <font size="3"><a href="Inventory-Dependent Demand.pdf" target="_blank">Dynamic Pricing and Inventory Management under Inventory-Dependent Demand</a>, <i><a href="https://pubsonline.informs.org/journal/opre" target="_blank">Operations Research</a></i>, 62(5), 2014, 1077-1094 (with  <a href="https://www.bus.miami.edu/thought-leadership/faculty/management/yang.html" target="_blank">Nan Yang</a>) [<a href="Inventory-Dependent Demand-ecompanion.pdf" target="_blank">Online Appendix</a>].</font></li>
 
+<!---
+<font size="2">    <a class="toggle-link" href="javascript:void(0);" onclick="toggleText('abs1')">Show Abstract</a>
+    <div class="hidden-text" id="abs1">
+        We analyze a finite horizon periodic review joint pricing and inventory management model for a firm that replenishes and sells a product under the scarcity effect of inventory. The demand distribution in each period depends negatively on the sales price and customer-accessible inventory level at the beginning of the period. The firm can withhold or dispose of its on-hand inventory to deal with the scarcity effect. We show that a customer-accessible-inventory-dependent order-upto/dispose-down-to/display-up-to list-price policy is optimal. Moreover, the optimal order-up-to/display-up-to and list-price
+levels are decreasing in the customer-accessible inventory level. When the scarcity effect of inventory is sufficiently strong,
+the firm should display no positive inventory and deliberately make every customer wait. The analysis of two important
+special cases wherein the firm cannot withhold (or dispose of) inventory delivers sharper insights showing that the inventorydependent demand drives both optimal prices and order-up-to levels down. In addition, we demonstrate that an increase
+in the operational flexibility (e.g., a higher salvage value or the inventory withholding opportunity) mitigates the demand
+loss caused by high excess inventory and increases the optimal order-up-to levels and sales prices. We also generalize our
+model by incorporating responsive inventory reallocation after demand realizes. Finally, we perform extensive numerical
+studies to demonstrate that both the profit loss of ignoring the scarcity effect and the value of dynamic pricing under the
+scarcity effect are significant.
+    </div></font>
+--->
+
+
 <p style="line-height:180%"> <font size="3"></font></p>
 
 
 
 <li><font size="3"> <a href="Fluctuating Cost-aia.pdf" target="_blank">Dynamic Pricing and Inventory Management under Fluctuating Procurement Costs</a>, <i><a href="http://pubsonline.informs.org/journal/msom" target="_blank">Manufacturing & Service Operations Management</a></i>, 17(3), 2015, 321-334 (with <a href="http://xiaog.weebly.com/" target="_blank">Guang Xiao</a> and  <a href="https://www.bus.miami.edu/thought-leadership/faculty/management/yang.html" target="_blank">Nan Yang</a>) [<a href="Fluctuating Cost-onlinesupplement.pdf" target="_blank">Online Appendix</a>].</font></li>
+<!---
+<font size="2"><a class="toggle-link" href="javascript:void(0);" onclick="toggleText('abs2')">Show Abstract</a>
+    <div class="hidden-text" id="abs2">
+        We consider a periodic review joint pricing and inventory control model in which a firm faces both stochastic
+demand and fluctuating procurement costs. To address procurement cost fluctuation, the firm adopts a
+dual-sourcing strategy, under which it procures from a spot market with immediate delivery and through a
+forward-buying contract with postponed delivery. Our analysis offers the unique insight that a risk-neutral firm
+may earn higher expected profit under a more volatile procurement cost process. This is because the firm makes
+its pricing and sourcing decisions in response to the realized cost in each period. Moreover, we characterize
+how the firm should dynamically adjust its pricing and sourcing decisions in accordance to cost evolution. For
+example, if sourcing through the forward-buying contract is less expensive than sourcing directly from the spot
+market, the optimal safety stock is decreasing in the current spot market purchasing cost. However, the optimal
+order quantity through the forward-buying contract is, in general, not monotone in the current spot-purchasing
+cost. Finally, we conduct extensive numerical experiments to show that dynamic pricing and dual sourcing may
+be either strategic complements or substitutes in the presence of fluctuating procurement costs and uncertain
+demand. This is because dynamic pricing mitigates demand uncertainty risk and exploits procurement cost
+fluctuation, whereas dual sourcing may either intensify or dampen demand risk.<p><p>
+<i>Key Words</i>: joint pricing and inventory management; fluctuating procurement cost; dual sourcing    
+    </div></font>
+--->
 
 <p style="line-height:180%"> <font size="3"></font></p>
 <li><font size="3"><a href="Gao_et_al-2017-Production_and_Operations_Management.pdf" target="_blank">Dynamic Supply Risk Management with Signal-Based Forecast, Multi-Sourcing, and Discretionary Selling</a>, <i><a href="http://onlinelibrary.wiley.com/journal/10.1111/(ISSN)1937-5956" target="_blank">Production and Operations Management</a></i>, 26(7), 2017, 1399-1415 (with <a href="http://longgao.wordpress.com/" target="_blank">Long Gao</a>,  <a href="https://www.bus.miami.edu/thought-leadership/faculty/management/yang.html" target="_blank">Nan Yang</a>, and <a href="http://business.fullerton.edu/Department/ISDS/#ISDSFacultyInfo?user=ting.luo@fullerton.edu" target="_blank">Ting Luo</a>) [<a href="DynamicRisk-Appendix.pdf" target="_blank">Online Appendix</a>].</font></li>
@@ -118,7 +181,8 @@
 
 <li><font size="3"> <a href="TwoSided_Competition.pdf" target="_blank">Competition and Coopetition for Two-sided Platforms</a>, <i><a href="http://onlinelibrary.wiley.com/journal/10.1111/(ISSN)1937-5956" target="_blank">Production and Operations Management</a></i>, 31(5), 2022, 1997-2014 (with <a href="https://maxccohen.github.io/" target="_blank">Maxime Cohen</a>) [<a href="TwoSided_Competition_Appendix.pdf" target="_blank">Online Appendix</a>].</font></li>
 <ul>
-<font size="3">--- Honorable Mention award in the <i>INFORMS Service Science 2017 Best Cluster Paper Award</i>.</font>
+<font size="3">--- Honorable Mention award in the <i>INFORMS Service Science 2017 Best Cluster Paper Award</i>.</font><p>
+ 
 </ul>
 <p style="line-height:180%"> <font size="3"></font></p>
 
@@ -147,7 +211,7 @@
 <p style="line-height:180%"> <font size="3"></font></p>
 
 
-<li> <font size="3"><a href="Social_nudge_nonblinded.pdf" target="_blank">The Impact of Social Nudges on User-Generated Content for Social Network Platforms</a>, <i><a href="https://pubsonline.informs.org/journal/mnsc" target="_blank">Management Science</a></i>, forthcoming, 2022 (with <a href="https://zhiyuzeng.org/" target="_blank">Zhiyu Zeng</a>, <a href="https://sites.google.com/site/olinhengchendai/" target="_blank">Hengchen Dai</a>, <a href="http://denniszhang.org/
+<li> <font size="3"><a href="Social_nudge_nonblinded.pdf" target="_blank">The Impact of Social Nudges on User-Generated Content for Social Network Platforms</a>, <i><a href="https://pubsonline.informs.org/journal/mnsc" target="_blank">Management Science</a></i>, 69(9), 2023, 5189-5208 (with <a href="https://zhiyuzeng.org/" target="_blank">Zhiyu Zeng</a>, <a href="https://sites.google.com/site/olinhengchendai/" target="_blank">Hengchen Dai</a>, <a href="http://denniszhang.org/
 " target="_blank">Dennis J. Zhang</a>, <a href="https://scholar.google.com/citations?user=rIMaIvoAAAAJ&hl=en" target="_blank">Heng Zhang</a>, <a href="https://shen.ieor.berkeley.edu/" target="_blank">Max Shen</a>, and <a href="https://scholar.google.com/citations?user=knz2JDsAAAAJ&hl=en" target="_blank">Zhiwei Xu</a>) [<a href="Social_nudge_Appendix.pdf" target="_blank">Online Appendix</a>].</font></li>
 <ul>
 <font size="3">--- Finalist of the <i>MSOM Student Paper Competition 2023</i> (Primary Awardee: <a href="https://zhiyuzeng.org/" target="_blank">Zhiyu Zeng</a>).</font><p>  
@@ -161,28 +225,9 @@
 <li><font size="3"> <a href="AvailabilityCompetition-Nonblinded.pdf" target="_blank">Inventory Commitment and Monetary Compensation under Competition</a>, <i><a href="http://pubsonline.informs.org/journal/msom" target="_blank">Manufacturing & Service Operations Management</a></i>, forthcoming, 2023 (with <a href="https://foster.uw.edu/academics/degree-programs/phd-program/directory/junfei-lei/" target="_blank">Junfei Lei</a>, <a href="http://apps.olin.wustl.edu/faculty/zhang/"target="_blank">Fuqiang Zhang</a>, and <a href="http://bs.ustc.edu.cn/english/profile-79.html"target="_blank">Yugang Yu</a>) [<a href="Availability-Appendix.pdf" target="_blank">Online Appendix</a>].</font></li>
 
 <p style="line-height:180%"> <font size="3"></font></p>
-</ol>
-
-<h3><font size="3">Working Papers</font></h3>
-
-<ol type=1 start=13>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<li><font size="3"> <a href="Ad-Choices-nonblinded.pdf" target="_blank">Online Advertisement Allocation under Customer Choices and Algorithmic Fairness</a> (with  <a href="https://iora.nus.edu.sg/wp-content/uploads/2019/10/CV_Li-Xiaolong.pdf" target="_blank">Xiaolong Li</a>, <a href="http://www.acem.sjtu.edu.cn/en/faculty/rongying.html" target="_blank">Ying Rong</a>, and <a href="http://www.acem.sjtu.edu.cn/en/faculty/zhenghuan.html" target="_blank">Huan Zheng</a>).</font></li>
+<li><font size="3"> <a href="Ad-Choices-nonblinded.pdf" target="_blank">Online Advertisement Allocation under Customer Choices and Algorithmic Fairness</a>, <i><a href="https://pubsonline.informs.org/journal/mnsc" target="_blank">Management Science</a></i>, forthcoming, 2023 (with  <a href="https://iora.nus.edu.sg/wp-content/uploads/2019/10/CV_Li-Xiaolong.pdf" target="_blank">Xiaolong Li</a>, <a href="http://www.acem.sjtu.edu.cn/en/faculty/rongying.html" target="_blank">Ying Rong</a>, and <a href="http://www.acem.sjtu.edu.cn/en/faculty/zhenghuan.html" target="_blank">Huan Zheng</a>).</font></li>
 
 
 <ul>
@@ -191,11 +236,11 @@
 
 <p style="line-height:180%"> <font size="3"></font></p>
 
+</ol>
 
+<h3><font size="3">Working Papers</font></h3>
 
-
-
-
+<ol type=1 start=14>
 
 
 
@@ -217,8 +262,8 @@ with Network Diffusion Effect</a> (with <a href="https://yunduanlin.github.io" t
 
 <li><font size="3"> <a href="NP-Diffusion_unblinded.pdf" target="_blank">Nonprogressive Diffusion on Social Networks: Approximation and Applications</a> (with <a href="https://yunduanlin.github.io" target="_blank">Yunduan Lin</a>, <a href="https://scholar.google.com/citations?user=rIMaIvoAAAAJ&hl=en" target="_blank">Heng Zhang</a>, and <a href="https://shen.ieor.berkeley.edu/" target="_blank">Max Shen</a>).</font></li>
 <ul>
-<font size="3">--- Winner of the <i>POMS-HK 2023 Best Student Paper Award Competition</i> (Primary Awardee: <a href="https://yunduanlin.github.io" target="_blank">Yunduan Lin</a>).</font>
-
+<font size="3">--- Winner of the <i>POMS-HK 2023 Best Student Paper Award Competition</i> (Primary Awardee: <a href="https://yunduanlin.github.io" target="_blank">Yunduan Lin</a>).</font><p>
+<font size="3">--- Finalist of the <i>INFORMS Data Mining and Decision Analytics Workshop 2023 Best Paper Competition</i> (Primary Awardee: <a href="https://yunduanlin.github.io" target="_blank">Yunduan Lin</a>).</font>
 </ul>
 
 <p style="line-height:180%"> <font size="3"></font></p>
@@ -274,6 +319,10 @@ with Network Diffusion Effect</a> (with <a href="https://yunduanlin.github.io" t
 <h2><font size="4">Research Awards and Grants</font></h2>
 <ol type=1 start=1><font size="3">
 
+
+<li>Finalist of the <i>INFORMS Data Mining and Decision Analytics Workshop 2023 Best Paper Competition</i> (Primary Awardee: <a href="https://yunduanlin.github.io" target="_blank">Yunduan Lin</a>), October 2023.</li>
+
+</p>
 
 <li>Finalist of the <i>MSOM Student Paper Competition 2023</i> (Primary Awardee: <a href="https://zhiyuzeng.org/" target="_blank">Zhiyu Zeng</a>), October 2023.</li>
 
@@ -464,7 +513,7 @@ Quotations
 <div id="footer">
 <div id="footer-text">
 Copyright <img  src="crimages.jpg" height="15" /> 2023 by Philip R. Zhang. All Rights Reserved. <br>
-Last Modified: September, 2023.
+Last Modified: October, 2023.
 
 </div>
 </div>

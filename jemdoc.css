@@ -85,6 +85,11 @@ body {
   margin-top: 1em;
 }
 
+.nav-map img {
+  width: 100%;
+  height: auto;
+}
+
 /* Main content area */
 .site-content {
   padding: 0 1em;

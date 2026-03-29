@@ -108,20 +108,28 @@ body {
 .social-links {
   margin-top: 0.5em;
   display: flex;
-  gap: 0.7em;
+  gap: 0.8em;
   flex-wrap: wrap;
+  align-items: center;
 }
 
 .social-links a {
   color: var(--color-text-secondary);
-  font-size: 0.85em;
-  padding: 2px 0;
-  transition: color 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  padding: 4px;
+  border-radius: 4px;
+  transition: color 0.2s ease, background-color 0.2s ease;
 }
 
 .social-links a:hover {
   color: var(--color-accent);
+  background-color: rgba(37, 99, 235, 0.08);
   border-bottom: none;
+}
+
+.social-links svg {
+  display: block;
 }
 
 /* Main content area */

@@ -443,6 +443,15 @@ img.eqwl {
   margin: 0;
 }
 
+/* Teaching lists */
+.teaching-list {
+  padding-left: 2rem;
+  list-style-type: circle;
+}
+.teaching-list li {
+  margin-bottom: 0.35em;
+}
+
 /* Print */
 @media print {
   .site-nav { display: none; }

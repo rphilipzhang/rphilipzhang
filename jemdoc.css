@@ -452,6 +452,27 @@ img.eqwl {
   margin-bottom: 0.35em;
 }
 
+/* Foldable abstracts */
+details.abstract {
+  margin: 0.4em 0 0.2em 0;
+}
+details.abstract summary {
+  cursor: pointer;
+  font-size: 0.88em;
+  color: var(--color-accent);
+  font-weight: 600;
+  user-select: none;
+}
+details.abstract summary:hover {
+  text-decoration: underline;
+}
+details.abstract p {
+  margin: 0.3em 0 0.1em 0;
+  font-size: 0.88em;
+  color: var(--color-text-secondary);
+  line-height: 1.55;
+}
+
 /* Print */
 @media print {
   .site-nav { display: none; }

@@ -542,6 +542,11 @@ body.dark-mode .social-links a:hover {
   border-color: var(--color-accent);
 }
 
+.theme-toggle svg,
+.theme-toggle span {
+  pointer-events: none;
+}
+
 /* Print */
 @media print {
   .site-nav { display: none; }

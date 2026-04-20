@@ -29,7 +29,7 @@
   <div class="menu-item"><a href="miscellaneous.html" class="current">Miscellaneous</a></div>
   <div class="menu-item"><a href="CV-Philip-Zhang.pdf" target="_blank">Curriculum Vitae</a></div>
   <br>
-  <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+  <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
     <svg id="theme-icon-sun" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
     <svg id="theme-icon-moon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:none"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
     <span id="theme-label">Dark</span>
@@ -125,18 +125,33 @@ Last Modified: March, 2026.
 <script type="text/javascript" id="clstr_globe" src="//cdn.clustrmaps.com/globe.js?d=FytemEHksUbBPcWaetCEc2a_rJJ_M3T3Kmpr2VmiZL8&w=100&h=100"></script>
 <script>
 (function(){
-  var b=document.body,t=document.getElementById('theme-toggle'),
-      s=document.getElementById('theme-icon-sun'),m=document.getElementById('theme-icon-moon'),
-      l=document.getElementById('theme-label');
-  function set(dark){
-    b.classList.toggle('dark-mode',dark);
-    s.style.display=dark?'none':'inline';
-    m.style.display=dark?'inline':'none';
-    l.textContent=dark?'Light':'Dark';
-    try{localStorage.setItem('theme',dark?'dark':'light')}catch(e){}
+  function init(){
+    var b=document.body;
+    var t=document.getElementById('theme-toggle');
+    if(!t)return;
+    var s=document.getElementById('theme-icon-sun');
+    var m=document.getElementById('theme-icon-moon');
+    var l=document.getElementById('theme-label');
+    function set(dark){
+      if(dark)b.classList.add('dark-mode');else b.classList.remove('dark-mode');
+      if(s)s.style.display=dark?'none':'inline';
+      if(m)m.style.display=dark?'inline':'none';
+      if(l)l.textContent=dark?'Light':'Dark';
+      try{localStorage.setItem('theme',dark?'dark':'light')}catch(e){}
+    }
+    var saved=null;
+    try{saved=localStorage.getItem('theme')}catch(e){}
+    set(saved==='dark');
+    t.addEventListener('click',function(e){
+      e.preventDefault();
+      set(!b.classList.contains('dark-mode'));
+    });
   }
-  set(localStorage.getItem('theme')==='dark');
-  t.addEventListener('click',function(){set(!b.classList.contains('dark-mode'))});
+  if(document.readyState==='loading'){
+    document.addEventListener('DOMContentLoaded',init);
+  }else{
+    init();
+  }
 })();
 </script>
 </body>

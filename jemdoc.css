@@ -530,37 +530,45 @@ html.dark-mode .nav-map img {
 /* Theme toggle button */
 .theme-toggle {
   margin-top: 1em;
-  padding: 6px;
+  padding: 4px 0;
   cursor: pointer;
   background: transparent;
-  color: var(--color-text-secondary);
   border: none;
-  border-radius: 50%;
-  transition: color 0.2s ease, background-color 0.2s ease;
   display: inline-flex;
   align-items: center;
-  justify-content: center;
-  width: 32px;
-  height: 32px;
-}
-
-.theme-toggle:hover {
-  color: var(--color-accent);
-  background-color: rgba(37, 99, 235, 0.08);
-}
-
-html.dark-mode .theme-toggle:hover {
-  background-color: rgba(109, 172, 240, 0.12);
+  gap: 6px;
 }
 
 .theme-toggle svg {
   pointer-events: none;
   display: block;
+  padding-bottom: 4px;
+  color: var(--color-text-light);
+  transition: color 0.2s ease;
 }
 
-.theme-toggle .icon-moon { display: none; }
-html.dark-mode .theme-toggle .icon-sun { display: none; }
-html.dark-mode .theme-toggle .icon-moon { display: block; }
+.theme-toggle .icon-sun {
+  color: var(--color-accent);
+  border-bottom: 2px solid var(--color-accent);
+}
+
+.theme-toggle .icon-moon {
+  border-bottom: 2px solid transparent;
+}
+
+.theme-toggle svg:hover {
+  color: var(--color-accent);
+}
+
+html.dark-mode .theme-toggle .icon-sun {
+  color: var(--color-text-light);
+  border-bottom-color: transparent;
+}
+
+html.dark-mode .theme-toggle .icon-moon {
+  color: var(--color-accent);
+  border-bottom-color: var(--color-accent);
+}
 
 /* Print */
 @media print {
@@ -607,6 +615,7 @@ html.dark-mode .theme-toggle .icon-moon { display: block; }
   .site-nav .theme-toggle {
     margin-top: 0;
     margin-left: auto;
+    gap: 4px;
   }
   .site-nav .nav-map {
     display: none;

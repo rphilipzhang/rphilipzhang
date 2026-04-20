@@ -581,6 +581,13 @@ body.dark-mode .social-links a:hover {
     margin-left: 0.5em;
     border-bottom: 2px solid var(--color-accent);
   }
+  .site-nav br {
+    display: none;
+  }
+  .site-nav .theme-toggle {
+    margin-top: 0;
+    margin-left: auto;
+  }
   .site-nav .nav-map {
     display: none;
   }

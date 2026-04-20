@@ -530,7 +530,7 @@ html.dark-mode .nav-map img {
 /* Theme toggle button */
 .theme-toggle {
   margin-top: 1em;
-  margin-left: 6px;
+  margin-left: 20px;
   padding: 4px 0;
   cursor: pointer;
   background: transparent;

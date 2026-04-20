@@ -473,6 +473,75 @@ details.abstract p {
   line-height: 1.55;
 }
 
+/* Dark mode */
+body.dark-mode {
+  --color-primary: #93b5e0;
+  --color-primary-dark: #b0cce8;
+  --color-link: #6dacf0;
+  --color-bg-menu: #1a1a2e;
+  --color-border: #2d2d44;
+  --color-border-light: #3a3a55;
+  --color-text: #e0e0e8;
+  --color-text-secondary: #a0a0b8;
+  --color-text-light: #707088;
+  --color-accent: #6dacf0;
+  background: #121220;
+}
+
+body.dark-mode tt {
+  background: #2a2a3a;
+}
+
+body.dark-mode dd {
+  color: #c8c8d8;
+}
+
+body.dark-mode .selected-pubs li {
+  background: #1a1a2e;
+}
+
+body.dark-mode footer a {
+  color: #6dacf0;
+}
+
+body.dark-mode div.infoblock > div.blockcontent {
+  background: #1a1a2e;
+}
+
+body.dark-mode div.codeblock > div.blockcontent {
+  background: #1a1a2e;
+}
+
+body.dark-mode div.blockcontent {
+  border-color: #3a3a55;
+}
+
+body.dark-mode .social-links a:hover {
+  background-color: rgba(109, 172, 240, 0.12);
+}
+
+/* Theme toggle button */
+.theme-toggle {
+  margin-top: 1em;
+  padding: 5px 10px;
+  cursor: pointer;
+  background: var(--color-border);
+  color: var(--color-text-secondary);
+  border: 1px solid var(--color-border-light);
+  border-radius: 6px;
+  font-size: 0.82em;
+  font-family: var(--font-body);
+  transition: background 0.2s ease, color 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4em;
+}
+
+.theme-toggle:hover {
+  color: var(--color-accent);
+  border-color: var(--color-accent);
+}
+
 /* Print */
 @media print {
   .site-nav { display: none; }

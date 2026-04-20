@@ -17,6 +17,9 @@
 <script type="text/javascript"
   src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
 </script>
+<script>
+(function(){try{if(localStorage.getItem('theme')==='dark')document.documentElement.classList.add('dark-mode')}catch(e){}})();
+</script>
 </head>
 <body>
 
@@ -32,10 +35,9 @@
   <div class="menu-item"><a href="miscellaneous.html">Miscellaneous</a></div>
   <div class="menu-item"><a href="CV-Philip-Zhang.pdf" target="_blank">Curriculum Vitae</a></div>
   <br>
-  <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
-    <svg id="theme-icon-sun" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
-    <svg id="theme-icon-moon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:none"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-    <span id="theme-label">Dark</span>
+  <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+    <svg class="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+    <svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
   </button>
   <div class="nav-map">
     <a href="https://clustrmaps.com/site/1bao5" title="Visit tracker for Rphilipzhang.github.io/rphilipzhang/" target="_blank"><img src="//www.clustrmaps.com/map_v2.png?d=FytemEHksUbBPcWaetCEc2a_rJJ_M3T3Kmpr2VmiZL8" alt="Visitor map"></a>
@@ -197,18 +199,22 @@ Last Modified: March, 2026.
 <script type="text/javascript" id="clstr_globe" src="//cdn.clustrmaps.com/globe.js?d=FytemEHksUbBPcWaetCEc2a_rJJ_M3T3Kmpr2VmiZL8&w=100&h=100"></script>
 <script>
 (function(){
-  var b=document.body,t=document.getElementById('theme-toggle'),
-      s=document.getElementById('theme-icon-sun'),m=document.getElementById('theme-icon-moon'),
-      l=document.getElementById('theme-label');
-  function set(dark){
-    b.classList.toggle('dark-mode',dark);
-    s.style.display=dark?'none':'inline';
-    m.style.display=dark?'inline':'none';
-    l.textContent=dark?'Light':'Dark';
-    try{localStorage.setItem('theme',dark?'dark':'light')}catch(e){}
+  function init(){
+    var h=document.documentElement;
+    var t=document.getElementById('theme-toggle');
+    if(!t)return;
+    t.addEventListener('click',function(e){
+      e.preventDefault();
+      var dark=!h.classList.contains('dark-mode');
+      if(dark)h.classList.add('dark-mode');else h.classList.remove('dark-mode');
+      try{localStorage.setItem('theme',dark?'dark':'light')}catch(_){}
+    });
   }
-  set(localStorage.getItem('theme')==='dark');
-  t.addEventListener('click',function(){set(!b.classList.contains('dark-mode'))});
+  if(document.readyState==='loading'){
+    document.addEventListener('DOMContentLoaded',init);
+  }else{
+    init();
+  }
 })();
 </script>
 </body>

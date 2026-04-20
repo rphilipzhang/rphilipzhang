@@ -474,7 +474,11 @@ details.abstract p {
 }
 
 /* Dark mode */
-body.dark-mode {
+html.dark-mode body {
+  background: #121220;
+}
+
+html.dark-mode {
   --color-primary: #93b5e0;
   --color-primary-dark: #b0cce8;
   --color-link: #6dacf0;
@@ -485,62 +489,78 @@ body.dark-mode {
   --color-text-secondary: #a0a0b8;
   --color-text-light: #707088;
   --color-accent: #6dacf0;
-  background: #121220;
 }
 
-body.dark-mode tt {
+html.dark-mode tt {
   background: #2a2a3a;
 }
 
-body.dark-mode dd {
+html.dark-mode dd {
   color: #c8c8d8;
 }
 
-body.dark-mode .selected-pubs li {
+html.dark-mode .selected-pubs li {
   background: #1a1a2e;
 }
 
-body.dark-mode footer a {
+html.dark-mode footer a {
   color: #6dacf0;
 }
 
-body.dark-mode div.infoblock > div.blockcontent {
+html.dark-mode div.infoblock > div.blockcontent {
   background: #1a1a2e;
 }
 
-body.dark-mode div.codeblock > div.blockcontent {
+html.dark-mode div.codeblock > div.blockcontent {
   background: #1a1a2e;
 }
 
-body.dark-mode div.blockcontent {
+html.dark-mode div.blockcontent {
   border-color: #3a3a55;
 }
 
-body.dark-mode .social-links a:hover {
+html.dark-mode .social-links a:hover {
   background-color: rgba(109, 172, 240, 0.12);
+}
+
+html.dark-mode .nav-map img {
+  opacity: 0.85;
 }
 
 /* Theme toggle button */
 .theme-toggle {
   margin-top: 1em;
-  padding: 5px 10px;
+  padding: 6px;
   cursor: pointer;
-  background: var(--color-border);
+  background: transparent;
   color: var(--color-text-secondary);
-  border: 1px solid var(--color-border-light);
-  border-radius: 6px;
-  font-size: 0.82em;
-  font-family: var(--font-body);
-  transition: background 0.2s ease, color 0.2s ease;
+  border: none;
+  border-radius: 50%;
+  transition: color 0.2s ease, background-color 0.2s ease;
   display: inline-flex;
   align-items: center;
-  gap: 0.4em;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
 }
 
 .theme-toggle:hover {
   color: var(--color-accent);
-  border-color: var(--color-accent);
+  background-color: rgba(37, 99, 235, 0.08);
 }
+
+html.dark-mode .theme-toggle:hover {
+  background-color: rgba(109, 172, 240, 0.12);
+}
+
+.theme-toggle svg {
+  pointer-events: none;
+  display: block;
+}
+
+.theme-toggle .icon-moon { display: none; }
+html.dark-mode .theme-toggle .icon-sun { display: none; }
+html.dark-mode .theme-toggle .icon-moon { display: block; }
 
 /* Print */
 @media print {

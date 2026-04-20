@@ -530,18 +530,21 @@ html.dark-mode .nav-map img {
 /* Theme toggle button */
 .theme-toggle {
   margin-top: 1em;
+  margin-left: 6px;
   padding: 4px 0;
   cursor: pointer;
   background: transparent;
   border: none;
   display: inline-flex;
   align-items: center;
-  gap: 6px;
+  gap: 10px;
 }
 
 .theme-toggle svg {
   pointer-events: none;
   display: block;
+  width: 20px;
+  height: 20px;
   padding-bottom: 4px;
   color: var(--color-text-light);
   transition: color 0.2s ease;

@@ -104,6 +104,15 @@ body {
   height: auto;
 }
 
+/* Self-hosted rotating globe (canvas) */
+.nav-globe {
+  display: block;
+  width: 100%;
+  max-width: 150px;
+  height: auto;
+  margin: 0 auto;
+}
+
 /* Page view counter (visitor badge) */
 .nav-counter {
   margin-top: 0.8em;

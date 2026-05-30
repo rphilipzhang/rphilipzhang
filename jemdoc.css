@@ -104,6 +104,27 @@ body {
   height: auto;
 }
 
+/* Page view counter (visitor badge) */
+.nav-counter {
+  margin-top: 0.8em;
+  text-align: center;
+}
+
+.nav-counter img {
+  max-width: 100%;
+  height: auto;
+}
+
+html.dark-mode .nav-counter img {
+  opacity: 0.85;
+}
+
+@media (max-width: 768px) {
+  .site-nav .nav-counter {
+    display: none;
+  }
+}
+
 /* Social links row */
 .social-links {
   margin-top: 0.5em;

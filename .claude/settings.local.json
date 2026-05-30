@@ -2,7 +2,13 @@
   "permissions": {
     "allow": [
       "Bash(curl -s -o /dev/null -w \"HTTP %{http_code} | type=%{content_type} | %{size_download} bytes\\\\n\" --max-time 15 \"https://visitor-badge.laobi.icu/badge?page_id=rphilipzhang.github.io&left_text=Page%20Views&left_color=%23475569&right_color=%232563eb\")",
-      "Bash(curl -s --max-time 15 \"https://visitor-badge.laobi.icu/badge?page_id=rphilipzhang.github.io&left_text=Page%20Views&left_color=%23475569&right_color=%232563eb\")"
+      "Bash(curl -s --max-time 15 \"https://visitor-badge.laobi.icu/badge?page_id=rphilipzhang.github.io&left_text=Page%20Views&left_color=%23475569&right_color=%232563eb\")",
+      "Bash(curl -s -o /dev/null -w \"https HTTP %{http_code} | type=%{content_type} | %{size_download} bytes\\\\n\" --max-time 15 \"https://rf.revolvermaps.com/0/0/8.js?i=5ewg2mn0e3z&m=0&c=ff0000&cr1=ffffff&f=arial&l=33&bv=80&lx=-420&ly=420&hi=8&he=2&hc=ff0000&rs=0&w=150&h=150\")",
+      "Bash(curl -s --max-time 15 \"https://rf.revolvermaps.com/0/0/8.js?i=5ewg2mn0e3z&m=0&c=ff0000&cr1=ffffff&f=arial&l=33&bv=80&lx=-420&ly=420&hi=8&he=2&hc=ff0000&rs=0&w=150&h=150\")",
+      "Bash(nslookup rf.revolvermaps.com)",
+      "Bash(nslookup revolvermaps.com)",
+      "Bash(curl -s -o /dev/null -w \"HTTP %{http_code}\\\\n\" --max-time 12 \"http://www.revolvermaps.com/\")",
+      "Bash(curl -s -o /dev/null -w \"HTTP %{http_code}\\\\n\" --max-time 12 \"https://www.revolvermaps.com/\")"
     ]
   }
 }

@@ -95,27 +95,9 @@ body {
   padding-bottom: 2px;
 }
 
-.nav-map {
-  margin-top: 1em;
-}
-
-.nav-map img {
-  width: 100%;
-  height: auto;
-}
-
-/* Self-hosted rotating globe (canvas) */
-.nav-globe {
-  display: block;
-  width: 100%;
-  max-width: 150px;
-  height: auto;
-  margin: 0 auto;
-}
-
-/* Page view counter (visitor badge) */
+/* Total page views counter (visitor badge) */
 .nav-counter {
-  margin-top: 0.8em;
+  margin-top: 1em;
   text-align: center;
 }
 
@@ -553,10 +535,6 @@ html.dark-mode .social-links a:hover {
   background-color: rgba(109, 172, 240, 0.12);
 }
 
-html.dark-mode .nav-map img {
-  opacity: 0.85;
-}
-
 /* Theme toggle button */
 .theme-toggle {
   margin-top: 1em;
@@ -649,9 +627,6 @@ html.dark-mode .theme-toggle .icon-moon {
     margin-top: 0;
     margin-left: auto;
     gap: 4px;
-  }
-  .site-nav .nav-map {
-    display: none;
   }
   .site-content {
     padding: 0.5em 1em;

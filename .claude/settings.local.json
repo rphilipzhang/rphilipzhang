@@ -10,7 +10,9 @@
       "Bash(curl -s -o /dev/null -w \"HTTP %{http_code}\\\\n\" --max-time 12 \"http://www.revolvermaps.com/\")",
       "Bash(curl -s -o /dev/null -w \"HTTP %{http_code}\\\\n\" --max-time 12 \"https://www.revolvermaps.com/\")",
       "Bash(echo \"=== all mmvst_* class names referenced ===\" *)",
-      "mcp__Claude_Preview__preview_start"
+      "mcp__Claude_Preview__preview_start",
+      "Bash(rm -f _globe_test.html .claude/launch.json && rmdir .claude 2>/dev/null; echo \"cleaned\"; git status --short)",
+      "Bash(git checkout *)"
     ]
   }
 }

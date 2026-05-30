@@ -1,0 +1,12 @@
+name = "visitor-globe"
+main = "worker.js"
+compatibility_date = "2024-11-01"
+
+# Create the KV namespace with:  wrangler kv namespace create GLOBE
+# then paste the printed id below (replace PASTE_YOUR_KV_NAMESPACE_ID_HERE).
+kv_namespaces = [
+  { binding = "GLOBE", id = "PASTE_YOUR_KV_NAMESPACE_ID_HERE" }
+]
+
+# Optional but recommended — set a random salt used to hash IPs:
+#   wrangler secret put SALT

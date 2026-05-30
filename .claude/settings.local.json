@@ -8,7 +8,8 @@
       "Bash(nslookup rf.revolvermaps.com)",
       "Bash(nslookup revolvermaps.com)",
       "Bash(curl -s -o /dev/null -w \"HTTP %{http_code}\\\\n\" --max-time 12 \"http://www.revolvermaps.com/\")",
-      "Bash(curl -s -o /dev/null -w \"HTTP %{http_code}\\\\n\" --max-time 12 \"https://www.revolvermaps.com/\")"
+      "Bash(curl -s -o /dev/null -w \"HTTP %{http_code}\\\\n\" --max-time 12 \"https://www.revolvermaps.com/\")",
+      "Bash(echo \"=== all mmvst_* class names referenced ===\" *)"
     ]
   }
 }

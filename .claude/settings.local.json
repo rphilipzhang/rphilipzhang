@@ -12,7 +12,8 @@
       "Bash(echo \"=== all mmvst_* class names referenced ===\" *)",
       "mcp__Claude_Preview__preview_start",
       "Bash(rm -f _globe_test.html .claude/launch.json && rmdir .claude 2>/dev/null; echo \"cleaned\"; git status --short)",
-      "Bash(git checkout *)"
+      "Bash(git checkout *)",
+      "Bash(awk -F: '{s+=$2} END{print s}')"
     ]
   }
 }

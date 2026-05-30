@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(curl -s -o /dev/null -w \"HTTP %{http_code} | type=%{content_type} | %{size_download} bytes\\\\n\" --max-time 15 \"https://visitor-badge.laobi.icu/badge?page_id=rphilipzhang.github.io&left_text=Page%20Views&left_color=%23475569&right_color=%232563eb\")",
+      "Bash(curl -s --max-time 15 \"https://visitor-badge.laobi.icu/badge?page_id=rphilipzhang.github.io&left_text=Page%20Views&left_color=%23475569&right_color=%232563eb\")"
+    ]
+  }
+}

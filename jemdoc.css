@@ -181,16 +181,28 @@ html.dark-mode .nav-counter img {
   display: flex;
   gap: 1.5em;
   margin-bottom: 1.5em;
-  align-items: flex-start;
+  align-items: stretch;
 }
 
+/* The photo column stretches to the height of the text column;
+   the image is cropped (object-fit: cover) to fill it. */
 .profile-photo {
   flex-shrink: 0;
+  position: relative;
+  width: 250px;
+}
+
+.profile-photo a {
+  position: absolute;
+  inset: 0;
 }
 
 .profile-photo img {
-  width: 220px;
-  height: auto;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 80% center;
   border-radius: 8px;
 }
 
@@ -635,8 +647,15 @@ html.dark-mode .theme-toggle .icon-moon {
     flex-direction: column;
     align-items: center;
   }
-  .profile-photo img {
+  .profile-photo {
     width: 200px;
+  }
+  .profile-photo a {
+    position: static;
+  }
+  .profile-photo img {
+    height: auto;
+    object-fit: contain;
   }
 }
 
